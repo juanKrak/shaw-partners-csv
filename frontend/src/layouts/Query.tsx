@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import autoAnimate from '@formkit/auto-animate';
-import {User} from '../../../backend/src/db/schema'
+import {User} from '../types'
 import { useStore } from '../App';
 
 export function Query() {
