@@ -85,7 +85,7 @@ export function Query() {
             </form>
             </section>
             <section ref={parent} className="max-w-6xl mx-auto w-full grid lg:grid-cols-3 gap-y-6 gap-x-4 h-fit pb-64 lg:pb-96 px-2 lg:px-0">
-                {formStatus === "submitting" ? Array.from({ length: Math.floor(Math.random() * 5) }).map((_, index) => <CardLoader key={index} />) :
+                {formStatus === "submitting" ? Array.from({ length: Math.floor((Math.random() * 5)+1) }).map((_, index) => <CardLoader key={index} />) :
                     (
                         users?.length ?
                         users.map(user => <Card key={user.id} user={user} />)
