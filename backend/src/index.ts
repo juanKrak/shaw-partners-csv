@@ -8,7 +8,7 @@ import { config } from 'dotenv'
 import { asc, desc, sql } from 'drizzle-orm'
 config()
 
-const app = express()
+export const app = express()
 
 const upload = multer({
     storage: multer.memoryStorage(),
@@ -61,7 +61,6 @@ app.post('/api/files', upload.array('files'), async (req, res) => {
 app.get('/api/users', async (req: Request, res: Response) => {
     try {
         let textSearch = `%${String(req.query.q ?? '').toLowerCase()}%`
-        
         
         let selectedUsers = await db
             .select()

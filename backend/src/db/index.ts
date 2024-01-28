@@ -10,7 +10,7 @@ config()
 
 let url = process.env.DATABASE_URL
 let authToken = process.env.DATABASE_AUTH_TOKEN
-if (!url || !authToken) console.error("Missing URL or AUTHTOKEN")
+if (!url || !authToken) console.log("Missing URL or AUTHTOKEN")
 
 const client = createClient({ url: url ?? "file:sqlite.db", authToken })
 export const db = drizzleTurso(client)
