@@ -105,7 +105,7 @@ type CardProps = {
 }
 
 function Card({ user }: CardProps) {
-    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded p-4 relative">
+    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded px-6 pt-8 pb-10 relative">
         <h1 className="text-xl lg:text-2xl font-bold underline-offset-2 mb-10">{user.name}</h1>
         <div className="text-sm font-semibold text-gray-800 mb-6">
             <address className='mb-2 flex gap-1 not-italic'>
@@ -131,7 +131,7 @@ function Card({ user }: CardProps) {
 }
 
 function CardLoader() {
-    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded p-4 relative">
+    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded px-6 pt-8 pb-10 relative">
     <h1 className="text-xl font-semibold animate-pulse bg-gray-400 rounded-full w-64 h-6 underline-offset-2 mb-10"></h1>
     <div className="text-sm font-semibold text-gray-800 mb-4">
         <address className='mb-2 flex gap-1 not-italic'>
