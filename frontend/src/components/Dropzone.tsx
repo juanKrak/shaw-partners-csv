@@ -1,5 +1,4 @@
 import React, { useState, DragEvent, useRef, useEffect } from 'react';
-import fileUploadIcon from '../assets/file_upload.svg';
 import autoAnimate from '@formkit/auto-animate'
 
 export type DropzoneProps = {
