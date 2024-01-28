@@ -27,7 +27,7 @@ function App() {
                     <div className="my-4" />
                     <div>
                         <h1 className='text-lg lg:text-2xl font-medium mb-4'><span className='text-xl lg:text-3xl italic font-bold'>"</span>A carefully handcrafted product.<span className='text-xl lg:text-3xl italic font-bold'>"</span></h1>
-                        <h2>By <a href="mailto:juan@krak.com.ar" className='text-violet-500 underline font-bold underline-offset-2'>Juan Rolon</a>.</h2>
+                        <h2>By <a href="mailto:juan@krak.com.ar" className='text-violet-500 underline font-bold underline-offset-2'>Juan Rolon</a>. For <strong>Shawn & Partners.</strong></h2>
                     </div>
                 </div>                    
             </footer>
