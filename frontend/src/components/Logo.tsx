@@ -2,7 +2,7 @@ type LogoProps = {
     dark?: boolean
 }
 
-export default function Logo({ dark = false }) {
+export default function Logo({ dark = false }:LogoProps) {
     return (
         <div
             className={
