@@ -3,6 +3,8 @@ frontend/node_modules
 
 backend/logs
 frontend/logs
+backend/.env
+frontend/.env
 backend/*.log
 frontend/*.log
 backend/npm-debug.log*

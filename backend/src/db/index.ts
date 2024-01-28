@@ -8,24 +8,9 @@ import { createClient } from '@libsql/client'
 import { config } from 'dotenv'
 config()
 
+let url = process.env.DATABASE_URL
+let authToken = process.env.DATABASE_AUTH_TOKEN
+if (!url || !authToken) console.error("Missing URL or AUTHTOKEN")
 
-function chooseDb(prod: boolean) {
-    if (prod) {
-        let url = process.env.DATABASE_URL
-        let authToken = process.env.DATABASE_AUTH_TOKEN
-        if (!url || !authToken) throw new Error("Missing env files.")
-        
-        const client = createClient({url, authToken})
-        const db = drizzleTurso(client)
-        return db        
-    } else {
-        const database = new Database('sqlite.db')
-        const db = drizzleBetterSqlite3(database)
-
-        console.log("Setting up sqlite.db file.")
-
-        return db
-    }
-}
-
-export const db = chooseDb(Boolean(process.env.PROD ?? false))
+const client = createClient({ url: url ?? "file:sqlite.db", authToken })
+export const db = drizzleTurso(client)

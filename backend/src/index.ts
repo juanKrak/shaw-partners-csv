@@ -5,7 +5,7 @@ import csvtojson from 'csvtojson'
 import { users, insertUsersSchema, InsertUser } from './db/schema'
 import { db } from './db'
 import { config } from 'dotenv'
-import { or, sql } from 'drizzle-orm'
+import { asc, desc, sql } from 'drizzle-orm'
 config()
 
 const app = express()
@@ -67,6 +67,7 @@ app.get('/api/users', async (req: Request, res: Response) => {
             .select()
             .from(users)
             .where(sql.join(Object.keys(users).map(column => sql`LOWER(${users[column as keyof typeof users]}) LIKE ${textSearch}`), sql` OR `))
+            .orderBy(desc(users.created_at))
 
         return res.json({
             data: selectedUsers
