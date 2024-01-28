@@ -105,9 +105,9 @@ type CardProps = {
 }
 
 function Card({ user }: CardProps) {
-    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded px-4 pt-4 pb-12 relative">
+    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded p-4 relative">
         <h1 className="text-xl lg:text-2xl font-bold underline-offset-2 mb-10">{user.name}</h1>
-        <div className="text-sm font-semibold text-gray-800 mb-8">
+        <div className="text-sm font-semibold text-gray-800 mb-6">
             <address className='mb-2 flex gap-1 not-italic'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 min-w-6 fill-violet-600 stroke-violet-600">
   <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
@@ -123,13 +123,15 @@ function Card({ user }: CardProps) {
             </h2>
             
         </div>
-            <span className="text-xs absolute font-bold bottom-2 right-4 text-gray-400 underline">{user.id}</span>
-            <span className="text-xs absolute font-bold bottom-2 left-4 text-gray-400 underline">{user.created_at}</span>
+        <div className="flex justify-between">
+            <span className="text-xs font-bold text-gray-400">{user.id}</span>
+            <span className="text-xs font-bold text-gray-400">{user.created_at}</span>
+        </div>
     </article>
 }
 
 function CardLoader() {
-    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded px-4 pt-4 pb-12 relative">
+    return <article className="border bg-white group hover:-translate-y-1 hover:shadow-lg transition-all border-black shadow rounded p-4 relative">
     <h1 className="text-xl font-semibold animate-pulse bg-gray-400 rounded-full w-64 h-6 underline-offset-2 mb-10"></h1>
     <div className="text-sm font-semibold text-gray-800 mb-4">
         <address className='mb-2 flex gap-1 not-italic'>
