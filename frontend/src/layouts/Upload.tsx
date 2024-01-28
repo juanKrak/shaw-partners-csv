@@ -30,7 +30,7 @@ export function Upload() {
         })
         
 
-        let res = await fetch(import.meta.env.VITE_BACKEND_URL ?? "http://localhost:3000" + '/api/files', {
+        let res = await fetch((import.meta.env.VITE_BACKEND_URL ?? "http://localhost:3000") + '/api/files', {
             body: form,
             method: 'post',
         })
