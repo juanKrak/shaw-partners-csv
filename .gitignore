@@ -17,6 +17,7 @@ backend/pnpm-debug.log*
 frontend/pnpm-debug.log*
 backend/lerna-debug.log*
 frontend/lerna-debug.log*
+backend/sqlite.db
 
 backend/node_modules
 frontend/node_modules
